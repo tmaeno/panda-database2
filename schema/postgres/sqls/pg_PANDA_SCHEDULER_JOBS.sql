@@ -31,7 +31,7 @@ fullq_name varchar(100);
 
 BEGIN
 
- -- ver 1.1, last update 2th July 2013
+ -- ver 1.1, last update 2nd July 2013
 --DBMS_APPLICATION_INFO.SET_MODULE( module_name => 'PanDA scheduler job', action_name => 'Create new partitions');
 --DBMS_APPLICATION_INFO.SET_CLIENT_INFO( client_info => sys_context('userenv', 'host') || ' ( ' || sys_context('userenv', 'ip_address') || ' )' );
 
@@ -144,7 +144,7 @@ BEGIN
 -- Update: 4th Feb 2016
 -- Added two columns to the JOBS tables: NUCLEUS and EVENTSERVICE
 -- 18th June 2015: added 9 additional columns to the JOB tables (MAXRSS, MAXVMEM, MAXSWAP, MAXPSS, AVGRSS, AVGVMEM, AVGSWAP, AVGPSS, MAXWALLTIME)
--- to easy identify the session and better view on resource usage by setting a dedicated module for the PanDA jobs
+-- to easily identify the session and better view on resource usage by setting a dedicated module for the PanDA jobs
 --DBMS_APPLICATION_INFO.SET_MODULE( module_name => 'PanDA scheduler job', action_name => 'Copy data from PanDA to PanDAARCH!');
 --DBMS_APPLICATION_INFO.SET_CLIENT_INFO( client_info => sys_context('userenv', 'host') || ' ( ' || sys_context('userenv', 'ip_address') || ' )' );
 
@@ -615,7 +615,7 @@ messg varchar(10);
 
 BEGIN
 
--- ver 1.2, last update 2th July 2013
+-- ver 1.2, last update 2nd July 2013
 -- Note: Oracle does NOT allow dropping of the last remaining non-interval partition (ORA-14758)! That is why is better to have INTERVAL = 'YES' condition in the WHERE clause
 -- get the older than the last 4 partitions (months)
 SELECT partition_name BULK COLLECT INTO STRICT coll_parts
@@ -901,7 +901,7 @@ messg varchar(10);
 
 BEGIN
 
--- ver 1.3, last update 22th August 2017
+-- ver 1.3, last update 22nd August 2017
 -- ver 1.2, last update 30th Oct 2014
 -- Note: Oracle does NOT allow dropping of the last remaining non-interval partition (ORA-14758)! That is why is better to have INTERVAL = 'YES' condition in the WHERE clause
 -- get the older than 90 days 
@@ -968,7 +968,7 @@ fullq_name varchar(100);
 
 BEGIN
 
--- ver 1.2, last update 2th July 2013
+-- ver 1.2, last update 2nd July 2013
 -- Note: Oracle does NOT allow dropping of the last remaining non-interval partition (ORA-14758)! That is why is better to have INTERVAL = 'YES' condition in the WHERE clause
 -- get the older than the last DAYS_OFFSET partitions (days)
 -- the DBMS_ASSERT.SQL_OBJECT_NAME function checks that the input string represents an existing object
@@ -1113,7 +1113,7 @@ fullq_name varchar(100);
 
 BEGIN
 
--- ver. 1.2, last update 2th July 2013
+-- ver. 1.2, last update 2nd July 2013
 --DBMS_APPLICATION_INFO.SET_MODULE( module_name => 'PanDA scheduler job', action_name => 'Rebuild indexes of table ' || UPPER(m_table)|| '.' || UPPER(m_table) );
 --DBMS_APPLICATION_INFO.SET_CLIENT_INFO( client_info => sys_context('userenv', 'host') || ' ( ' || sys_context('userenv', 'ip_address') || ' )' );
 
@@ -1158,7 +1158,7 @@ messg varchar(10);
 
 BEGIN
 
--- to easy identify the session and better view on resource usage by setting a dedicated module for the PanDA jobs
+-- to easily identify the session and better view on resource usage by setting a dedicated module for the PanDA jobs
 --DBMS_APPLICATION_INFO.SET_MODULE( module_name => 'PanDA scheduler job', action_name => 'Sliding window for TASKS_STATUSLOG');
 --DBMS_APPLICATION_INFO.SET_CLIENT_INFO( client_info => sys_context('userenv', 'host') || ' ( ' || sys_context('userenv', 'ip_address') || ' )' );
 
@@ -1224,9 +1224,9 @@ BEGIN
 -- 2026 02 23, ver 1.4 , added RESOURCE_TYPE column
 -- ver 1.3 , last modified on 2nd September 2024
 -- added NUM_OF_CORES columns
--- ver 1.2 , last modified on 2th July 2013
+-- ver 1.2 , last modified on 2nd July 2013
 -- added VO and WORKQUEUE_ID columns
--- to easy identify the session and better view on resource usage by setting a dedicated module for the PanDA jobs
+-- to easily identify the session and better view on resource usage by setting a dedicated module for the PanDA jobs
 --DBMS_APPLICATION_INFO.SET_MODULE( module_name => 'PanDA scheduler job', action_name => 'Aggregates data for the active jobs!');
 --DBMS_APPLICATION_INFO.SET_CLIENT_INFO( client_info => sys_context('userenv', 'host') || ' ( ' || sys_context('userenv', 'ip_address') || ' )' );
 
@@ -1390,7 +1390,7 @@ CREATE OR REPLACE PROCEDURE doma_panda.update_job_stats_hp () AS $body$
 BEGIN
 
 -- 30th Nov 2020 , ver 1.0
--- to easy identify the session and better view on resource usage by setting a dedicated module for the PanDA jobs
+-- to easily identify the session and better view on resource usage by setting a dedicated module for the PanDA jobs
 --DBMS_APPLICATION_INFO.SET_MODULE( module_name => 'PanDA scheduler job', action_name => 'Counts jobs from all tables with max priority!');
 --DBMS_APPLICATION_INFO.SET_CLIENT_INFO( client_info => sys_context('userenv', 'host') || ' ( ' || sys_context('userenv', 'ip_address') || ' )' );
 
@@ -1466,7 +1466,7 @@ ALTER PROCEDURE doma_panda.update_job_stats_hp () OWNER TO panda;
 CREATE OR REPLACE PROCEDURE doma_panda.update_num_input_data_files () AS $body$
 BEGIN
 
--- to easy identify the session and better view on resource usage by setting a dedicated module for the PanDA jobs
+-- to easily identify the session and better view on resource usage by setting a dedicated module for the PanDA jobs
 --DBMS_APPLICATION_INFO.SET_MODULE( module_name => 'PanDA scheduler job', action_name => 'Calculates mean number of input files for the different types of jobs');
 --DBMS_APPLICATION_INFO.SET_CLIENT_INFO( client_info => sys_context('userenv', 'host') || ' ( ' || sys_context('userenv', 'ip_address') || ' )' );
 
@@ -1519,7 +1519,7 @@ CREATE OR REPLACE PROCEDURE doma_panda.update_run_jumbo_count () AS $body$
 BEGIN
 
 -- ver 0.1 , 09 August 2021
--- to easy identify the session and better view on resource usage by setting a dedicated module for the PanDA jobs
+-- to easily identify the session and better view on resource usage by setting a dedicated module for the PanDA jobs
 --DBMS_APPLICATION_INFO.SET_MODULE( module_name => 'PanDA scheduler job', action_name => 'Aggregates data for the Jumbo task count!');
 --DBMS_APPLICATION_INFO.SET_CLIENT_INFO( client_info => sys_context('userenv', 'host') || ' ( ' || sys_context('userenv', 'ip_address') || ' )' );
 
@@ -1577,7 +1577,7 @@ ALTER PROCEDURE doma_panda.update_run_jumbo_count () OWNER TO panda;
 CREATE OR REPLACE PROCEDURE doma_panda.update_total_walltime () AS $body$
 BEGIN
 
--- to easy identify the session and better view on resource usage by setting a dedicated module for the PanDA jobs
+-- to easily identify the session and better view on resource usage by setting a dedicated module for the PanDA jobs
 --DBMS_APPLICATION_INFO.SET_MODULE( module_name => 'PanDA scheduler job', action_name => 'Calculates queued walltime');
 --DBMS_APPLICATION_INFO.SET_CLIENT_INFO( client_info => sys_context('userenv', 'host') || ' ( ' || sys_context('userenv', 'ip_address') || ' )' );
 
@@ -1700,8 +1700,8 @@ jobs_diff bigint;
 valschema_name varchar(30);
 BEGIN
 
--- ver 1.5, last update 2th July 2013
--- to easy identify the session and better view on resource usage by setting a dedicated module for the PanDA jobs
+-- ver 1.5, last update 2nd July 2013
+-- to easily identify the session and better view on resource usage by setting a dedicated module for the PanDA jobs
 --DBMS_APPLICATION_INFO.SET_MODULE( module_name => 'PanDA scheduler job', action_name => 'Verify data copying and remove partitions if the all data has been copied!');
 --DBMS_APPLICATION_INFO.SET_CLIENT_INFO( client_info => sys_context('userenv', 'host') || ' ( ' || sys_context('userenv', 'ip_address') || ' )' );
 
@@ -2177,7 +2177,7 @@ coll_parts part_names;
 jobs_diff bigint;
 BEGIN
 
--- to easy identify the session and better view on resource usage by setting a dedicated module for the PanDA jobs
+-- to easily identify the session and better view on resource usage by setting a dedicated module for the PanDA jobs
 --DBMS_APPLICATION_INFO.SET_MODULE( module_name => 'PanDA scheduler job', action_name => 'Verify data copying and remove partitions if the all data has been copied!');
 --DBMS_APPLICATION_INFO.SET_CLIENT_INFO( client_info => sys_context('userenv', 'host') || ' ( ' || sys_context('userenv', 'ip_address') || ' )' );
 

@@ -277,7 +277,7 @@ CREATE TABLE harvester_commands (
 	params text
 ) ;
 COMMENT ON TABLE harvester_commands IS E'Command queue for harvester';
-COMMENT ON COLUMN harvester_commands.ack_requested IS E'0/1, depending on whether panda server expects and acknowledgement';
+COMMENT ON COLUMN harvester_commands.ack_requested IS E'0/1, depending on whether panda server expects an acknowledgement';
 COMMENT ON COLUMN harvester_commands.command_id IS E'Command ID for primary key';
 COMMENT ON COLUMN harvester_commands.creation_date IS E'Timestamp when the command was generated';
 COMMENT ON COLUMN harvester_commands.params IS E'Parameters for the call';

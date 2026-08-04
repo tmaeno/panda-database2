@@ -363,7 +363,7 @@ CREATE TABLE "ATLAS_PANDA"."GLOBAL_SHARES_AUDIT"
    ) ;
 
    COMMENT ON COLUMN "ATLAS_PANDA"."HARVESTER_COMMANDS"."COMMAND_ID" IS 'Command ID for primary key';
-   COMMENT ON COLUMN "ATLAS_PANDA"."HARVESTER_COMMANDS"."ACK_REQUESTED" IS '0/1, depending on whether panda server expects and acknowledgement';
+   COMMENT ON COLUMN "ATLAS_PANDA"."HARVESTER_COMMANDS"."ACK_REQUESTED" IS '0/1, depending on whether panda server expects an acknowledgement';
    COMMENT ON COLUMN "ATLAS_PANDA"."HARVESTER_COMMANDS"."CREATION_DATE" IS 'Timestamp when the command was generated';
    COMMENT ON COLUMN "ATLAS_PANDA"."HARVESTER_COMMANDS"."STATUS" IS 'Status of the call: new, retrieved, acknowledged...';
    COMMENT ON COLUMN "ATLAS_PANDA"."HARVESTER_COMMANDS"."STATUS_DATE" IS 'Timestamp when the status last changed';
